@@ -1,3 +1,6 @@
+import path from 'path';
+path.resolve('./next.config.js');
+
 export function Index() {
   /*
    * Replace the elements below with your own.

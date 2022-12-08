@@ -13,8 +13,11 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
-  outputStandalone: true,
-  outputFileTracingRoot: path.join(__dirname, "../../"),
+  output: 'standalone',
+  experimental: {
+    // this includes files from the monorepo base two directories up
+    outputFileTracingRoot: path.join(__dirname, '../../'),
+  },
 };
 
 module.exports = withNx(nextConfig);
